@@ -1160,7 +1160,7 @@ function ResultView({sub,logo,onBack,onPrint,isPublic,resultLink,copyLink}){
       {/* 인쇄용 헤더 */}
       <div className="print-header" style={{display:"none"}}>
         <div>
-          <div className="print-header-logo">{logo?<img src={logo} alt="logo" style={{height:32,objectFit:"contain",filter:"brightness(0) invert(1)"}}/>:"PILTOP Career Compass"}</div>
+          <div className="print-header-logo">{logo?<img src={logo} alt="logo" style={{height:32,objectFit:"contain",filter:"brightness(0) invert(1)"}}/>:"APSUN Career Compass"}</div>
           <div className="print-header-sub">진로적성 종합분석 보고서</div>
         </div>
         <div className="print-header-info">검사일: {s.submittedAt}<br/>{s.info?.school&&<>{s.info.school}<br/></>}{s.info?.grade}</div>
