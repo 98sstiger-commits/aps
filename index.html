@@ -983,7 +983,14 @@ function App(){
     {view==="result_pub"&&selSub&&(
       <ResultView sub={selSub} logo={logo} isPublic
         onBack={()=>{setSelSub(null);setView("finished");window.history.replaceState(null,'',window.location.pathname);}}
-        onPrint={()=>window.print()}
+        onPrint={()=>{
+          const isMobile=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if(isMobile){
+            alert('📱 PDF 저장 방법\n\n[iPhone/iPad]\n화면 하단 공유버튼(□↑) → 프린트\n\n[Android]\n브라우저 메뉴(⋮) → 인쇄 또는 PDF로 저장');
+          } else {
+            window.print();
+          }
+        }}
         resultLink={`${window.location.origin}${window.location.pathname}?r=${encodeURIComponent(selSub.token)}`}
         copyLink={copyLink}/>
     )}
@@ -1097,7 +1104,14 @@ function App(){
     {view==="admin"&&adminAuth&&selSub&&(
       <ResultView sub={selSub} logo={logo}
         onBack={()=>setSelSub(null)}
-        onPrint={()=>window.print()}
+        onPrint={()=>{
+          const isMobile=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if(isMobile){
+            alert('📱 PDF 저장 방법\n\n[iPhone/iPad]\n화면 하단 공유버튼(□↑) → 프린트\n\n[Android]\n브라우저 메뉴(⋮) → 인쇄 또는 PDF로 저장');
+          } else {
+            window.print();
+          }
+        }}
         resultLink={resultUrl(selSub.token||selSub.id)}
         copyLink={copyLink}/>
     )}
