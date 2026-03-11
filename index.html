@@ -733,10 +733,10 @@ function App(){
         onTouchEnd={()=>clearTimeout(logoTapRef.current._long)}>
         {logo?<img src={logo} alt="logo"/>:"✦"}
       </div>
-      {!logo&&<div>
+      <div>
         <div className="logo-name"><span className="p">APS</span><span className="t">UN</span></div>
         <div className="logo-tag">Career Compass</div>
-      </div>}
+      </div>
     </div>
   );
 
@@ -1136,10 +1136,10 @@ function ResultView({sub,logo,onBack,onPrint,isPublic,resultLink,copyLink}){
       <div className="logo-box" style={{background:logo?"transparent":"",boxShadow:logo?"none":""}}>
         {logo?<img src={logo} alt="logo" style={{width:"100%",height:"100%",objectFit:"contain"}}/>:"✦"}
       </div>
-      {!logo&&<div>
+      <div>
         <div className="logo-name"><span className="p">APS</span><span className="t">UN</span></div>
         <div className="logo-tag">Career Compass</div>
-      </div>}
+      </div>
     </div>
   );
 
