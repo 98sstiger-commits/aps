@@ -842,6 +842,9 @@ function App(){
         <span className="badge">💾 자동 저장</span>
       </div>
       <button className="btn" onClick={()=>setView("info")}>검사 시작하기 →</button>
+      <div style={{marginTop:16,display:"flex",justifyContent:"center"}}>
+        <a href="tel:0317172121" style={{display:"inline-flex",alignItems:"center",gap:5,padding:"6px 16px",borderRadius:99,background:"rgba(255,255,255,.04)",border:"1px solid rgba(255,255,255,.08)",color:"rgba(125,227,240,.6)",fontSize:12,textDecoration:"none"}}>📞 031.717.2121</a>
+      </div>
     </div></div>}
 
     {view==="already"&&<div className="root"><div className="card fu">
@@ -974,9 +977,9 @@ function App(){
         <h2>제출 완료!</h2>
         <p className="muted" style={{lineHeight:2}}><strong style={{color:"#7DE3F0"}}>{selSub.info?.name}</strong>님의 검사가 정상 제출되었습니다.<br/>선생님께서 결과를 분석 후 전달해드릴 예정입니다.<br/>잠시만 기다려 주세요 😊</p>
       </div>
-      <div style={{padding:"14px 16px",borderRadius:12,background:"rgba(14,165,201,.08)",border:"1px solid rgba(14,165,201,.2)",fontSize:12.5,color:"rgba(125,227,240,.7)",textAlign:"center",lineHeight:1.9}}>
-        📋 검사 코드: <strong style={{color:"#38C9E0"}}>{selSub.token}</strong><br/>
-        선생님께 코드를 알려주시면 결과를 더 빨리 받으실 수 있어요.
+      <div style={{padding:"14px 16px",borderRadius:12,background:"rgba(14,165,201,.08)",border:"1px solid rgba(14,165,201,.2)",textAlign:"center",lineHeight:2}}>
+        <div style={{fontSize:12,color:"rgba(125,227,240,.6)",marginBottom:10}}>📞 결과 상담 문의</div>
+        <a href="tel:0317172121" style={{display:"inline-flex",alignItems:"center",gap:6,padding:"8px 20px",borderRadius:99,background:"rgba(14,165,201,.18)",border:"1px solid rgba(14,165,201,.35)",color:"#7DE3F0",fontSize:13,fontWeight:600,textDecoration:"none"}}>📱 031.717.2121</a>
       </div>
     </div></div>}
 
@@ -1369,8 +1372,11 @@ function ResultView({sub,logo,onBack,onPrint,isPublic,resultLink,copyLink}){
         </div>
       </div>
 
-      <div style={{fontSize:11,color:"rgba(14,165,201,.4)",lineHeight:1.9,textAlign:"center",marginBottom:16,marginTop:20}}>
+      <div style={{fontSize:11,color:"rgba(14,165,201,.4)",lineHeight:1.9,textAlign:"center",marginBottom:12,marginTop:20}}>
         ※ Holland RIASEC · Gardner MI 이론 기반 전문 참고용 검사입니다.<br/>심층 상담을 통해 정확한 진로 설계를 진행해 주세요.
+      </div>
+      <div className="no-print" style={{display:"flex",justifyContent:"center",marginBottom:16}}>
+        <a href="tel:0317172121" style={{display:"inline-flex",alignItems:"center",gap:6,padding:"8px 20px",borderRadius:99,background:"rgba(14,165,201,.12)",border:"1px solid rgba(14,165,201,.25)",color:"#7DE3F0",fontSize:12.5,fontWeight:600,textDecoration:"none"}}>📞 031.717.2121</a>
       </div>
       <div className="btn-row no-print">
         {onBack&&<button className="btn btn-g" onClick={onBack}>← {isPublic?"홈":"목록"}</button>}
